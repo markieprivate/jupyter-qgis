@@ -1,5 +1,5 @@
 # Jupyter Remote Desktop Proxy
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jupyterhub/jupyter-remote-desktop-proxy/HEAD?urlpath=desktop)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/scottyhq/jupyter-remote-desktop-proxy/qgis?urlpath=desktop)
 
 Run XFCE (or other desktop environments) on Jupyter.
 
