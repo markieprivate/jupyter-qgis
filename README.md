@@ -1,45 +1,13 @@
-# Jupyter Remote Desktop Proxy
+# Jupyter Remote QGIS Desktop
+
+Run [QGIS Desktop App (3.18)](https://qgis.org/en/site/) vi BinderHub! Click the button below to launch a server:
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/scottyhq/jupyter-remote-desktop-proxy/qgis?urlpath=desktop)
 
-Run XFCE (or other desktop environments) on Jupyter.
+As more GIS datasets are hosted in Cloud datacenters it can be advantageous to move your computing environment to the data rather than the other way around. Jupyter Servers are most commonly used to run Jupyter Notebooks, but they also facilitate running many other applications! For example [VScode](https://github.com/betatim/vscode-binder) or [Rstudio](https://github.com/binder-examples/r-conda). Those modern applications are built to run in browsers, but what about things like QGIS, a GUI desktop application for geospatial analysis? Thanks to the brilliant folks working on project Jupyter you can even run QGIS!
 
-This is based on https://github.com/ryanlovett/nbnovnc.
+This configuration runs a [Linux XFCE](https://www.xfce.org) desktop on the Jupyter single-user server, and proxies it to your browser using Virtual Network Computing (VNC). Read more about the implementation here: https://github.com/jupyterhub/jupyter-remote-desktop-proxy.
 
-When this extension is launched it will run a Linux desktop on the Jupyter single-user server, and proxy it to your browser using VNC via Jupyter.
+Don't expect extreme performance here, this is really just a proof of concept, but could be a great resource for classrooms, tutorials, or demos. You can also set up your own [BinderHub](https://binderhub.readthedocs.io/en/latest/) to deploy configurations like this with more computational resources and higher bandwidth:
 
-If a `vncserver` executable is found in `PATH` it will be used, otherwise a bundled TightVNC server is run.
-You can use this to install vncserver with support for other features, for example the [`Dockerfile`](./Dockerfile) in this repository installs TurboVNC for improved OpenGL support.
-
-
-## Docker
-
-To spin up such a notebook first build the container:
-
-```bash
-$ docker build -t $(whoami)/$(basename ${PWD}) .
-```
-
-Now you can ran the image:
-
-```bash
-$ docker run --rm  -p 8888:8888 $(whoami)/$(basename ${PWD})
-Executing the command: jupyter notebook
-[I 12:43:59.148 NotebookApp] Writing notebook server cookie secret to /home/jovyan/.local/share/jupyter/runtime/notebook_cookie_secret
-[I 12:44:00.221 NotebookApp] JupyterLab extension loaded from /opt/conda/lib/python3.7/site-packages/jupyterlab
-[I 12:44:00.221 NotebookApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
-[I 12:44:00.224 NotebookApp] Serving notebooks from local directory: /home/jovyan
-[I 12:44:00.225 NotebookApp] The Jupyter Notebook is running at:
-[I 12:44:00.225 NotebookApp] http://924904e0a646:8888/?token=40475e553b7671b9e93533b97afe584fa2030448505a7d83
-[I 12:44:00.225 NotebookApp]  or http://127.0.0.1:8888/?token=40475e553b7671b9e93533b97afe584fa2030448505a7d83
-[I 12:44:00.225 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-[C 12:44:00.229 NotebookApp]
-
-    To access the notebook, open this file in a browser:
-        file:///home/jovyan/.local/share/jupyter/runtime/nbserver-8-open.html
-    Or copy and paste one of these URLs:
-        http://924904e0a646:8888/?token=40475e553b7671b9e93533b97afe584fa2030448505a7d83
-     or http://127.0.0.1:8888/?token=40475e553b7671b9e93533b97afe584fa2030448505a7d83
-*snip*
-```
-
-Now head to the URL shown and you will be greated with a XFCE desktop.
+[![badge](https://img.shields.io/static/v1.svg?logo=Jupyter&label=PangeoBinderAWS&message=us-west-2&color=orange)](https://aws-uswest2-binder.pangeo.io/v2/gh/scottyhq/jupyter-remote-desktop-proxy/qgis?urlpath=desktop) 
