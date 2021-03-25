@@ -14,4 +14,5 @@ Don't expect extreme performance here, this is really just a proof of concept, b
 
 ### Demo
 
-![qgis-demo](https://user-images.githubusercontent.com/3924836/112456012-6d268900-8dae-11eb-8457-9b92b7cf5612.gif)
+![qgis-demo-loop](https://user-images.githubusercontent.com/3924836/112456403-d9a18800-8dae-11eb-883a-6d87290c7f95.gif)
+
