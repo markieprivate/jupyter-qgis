@@ -11,3 +11,7 @@ This configuration runs a [Linux XFCE](https://www.xfce.org) desktop on the Jupy
 Don't expect extreme performance here, this is really just a proof of concept, but could be a great resource for classrooms, tutorials, or demos. You can also set up your own [BinderHub](https://binderhub.readthedocs.io/en/latest/) to deploy configurations like this with more computational resources and higher bandwidth:
 
 [![badge](https://img.shields.io/static/v1.svg?logo=Jupyter&label=PangeoBinderAWS&message=us-west-2&color=orange)](https://aws-uswest2-binder.pangeo.io/v2/gh/scottyhq/jupyter-remote-desktop-proxy/qgis?urlpath=desktop) 
+
+### Demo
+
+![qgis-demo](https://user-images.githubusercontent.com/3924836/112456012-6d268900-8dae-11eb-8457-9b92b7cf5612.gif)
