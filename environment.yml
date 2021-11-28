@@ -6,4 +6,4 @@ dependencies:
   - qgis=3.18
   - websockify
   - pip:
-      - .
+      - jupyter-desktop-server
