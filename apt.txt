@@ -1,1 +1,2 @@
-
+libusb
+libgl1-mesa-glx
