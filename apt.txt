@@ -1,5 +1,1 @@
-dbus-x11
-firefox
-xfce4
-xorg
-xubuntu-icon-theme
+
